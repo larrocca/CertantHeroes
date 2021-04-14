@@ -1,0 +1,16 @@
+  <div class="card-group">
+        <div class="card" >
+            <img src="{{heroe.img}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{heroe.nombre}}</h5>
+                <p class="card-text">{{heroe.bio}}</p>
+                <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
+            </div>
+            <!-- <a [routerLink]="['/heroe',i]" type="button" class="btn btn-outline-primary brn-block">
+                ver mas
+            </a>-->
+            <button (click)="verHeroe()" type="button" class="btn btn-outline-primary brn-block">
+                ver mas
+            </button>
+        </div>
+    </div>

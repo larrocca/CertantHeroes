@@ -1,4 +1,4 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Input } from '@angular/core';
 import { HeroesService, Heroe } from '../../servicios/heroes.service';
 import { RouterModule } from '@angular/router';
 import {Router} from '@angular/router'
