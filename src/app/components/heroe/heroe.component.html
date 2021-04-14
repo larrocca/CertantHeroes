@@ -1,0 +1,20 @@
+<h1>{{this.heroe.nombre |uppercase}}<small>({{this.heroe.aparicion |date:'y' }})</small></h1>
+<!--|uppercase y |date es un pipe-->
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <img src="{{this.heroe.img}}" alt="" class="img-flui">
+        <br><br>
+        <a [routerLink]="['/heroes']" class="btn btn-outline-danger btn-clock">Regresar</a>
+    </div>
+    <div class="col-md-8">
+        <h3>{{this.heroe.nombre}}</h3>
+        <hr>
+        <p>{{this.heroe.bio}}</p>
+    </div>
+    <div>
+        <img *ngIf="this.heroe.casa == 'Marvel'" src="../../../assets/img/A-64.png" alt="DC">
+        <img *ngIf="this.heroe.casa == 'DC'" src="../../../assets/img/dc.png" alt="Marvel">
+    </div>
+
+</div>

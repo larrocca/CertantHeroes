@@ -1,0 +1,7 @@
+<h1>Busqueda: {{termino}}</h1>
+<div *ngIf="heroes.length ===0">
+    <p>No se encontro resultados para {{termino}}</p>
+</div>
+<div *ngFor="let heroe of heroes" class="container">
+    <h1>{{this.heroe.nombre}}</h1>
+</div>
