@@ -22,4 +22,8 @@ describe('AboutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  fit('Titulo deberia ser igual a titulo', () => {
+    expect(component.title).toEqual('titulo');
+  });
 });
