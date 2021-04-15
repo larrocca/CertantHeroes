@@ -1,17 +1,19 @@
 <div class="card animated fadeIn fast">
     <img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
     <div class="card-body">
-        <h4 class="card-title">{{ heroe.nombre }}</h4>
-        <p class="card-text"> {{ heroe.bio }} </p>
+        <h4 class="card-title">{{ heroe.nombre |lowercase}}</h4>
+        <p class="card-text"> {{ heroe.bio |uppercase }} </p>
         <p class="card-text"><small class="text-muted">{{ heroe.aparicion |date:'fullDate'}}</small></p>
         <button (click)="verHeroe()" type="button" class="btn btn-outline-primary btn-block">
       Ver más...
     </button>
         <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más link...</a> -->
+        <!-- //Para cambiar el nombre
         <div>
             <p>Cambiar nombre</p>
             <input class="btn-outline" type="text" #cambiarNombre>
             <button class="btn btn-outline-primary" (click)="enviarNombreHeroe(cambiarNombre.value, heroe.idx)">Cambiar</button>
         </div>
+        -->
     </div>
 </div>

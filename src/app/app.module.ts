@@ -28,7 +28,6 @@ registerLocaleData(localeEsAr, 'es-Ar');
     HeroeComponent,
     BusquedaComponent,
     HeroeTarjetaComponent,
-    
   ],
   imports: [
     BrowserModule,
