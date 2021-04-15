@@ -7,9 +7,9 @@
         <br><br>
     </div>
     <div class="col-md-8">
-        <h3>{{this.heroe.nombre}}</h3>
+        <h3>{{this.heroe.nombre |lowercase}}</h3>
         <hr>
-        <p>{{this.heroe.bio}}</p>
+        <p>{{this.heroe.bio |uppercase}}</p>
     </div>
     <div>
         <img *ngIf="this.heroe.casa == 'Marvel'" src="../../../assets/img/A-64.png" alt="DC">
