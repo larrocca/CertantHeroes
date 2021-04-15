@@ -1,16 +1,17 @@
-  <div class="card-group">
-        <div class="card" >
-            <img src="{{heroe.img}}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{heroe.nombre}}</h5>
-                <p class="card-text">{{heroe.bio}}</p>
-                <p class="card-text"><small class="text-muted">{{heroe.aparicion}}</small></p>
-            </div>
-            <!-- <a [routerLink]="['/heroe',i]" type="button" class="btn btn-outline-primary brn-block">
-                ver mas
-            </a>-->
-            <button (click)="verHeroe()" type="button" class="btn btn-outline-primary brn-block">
-                ver mas
-            </button>
+<div class="card animated fadeIn fast">
+    <img class="card-img-top img-fluid" [src]="heroe.img" [alt]="heroe.nombre">
+    <div class="card-body">
+        <h4 class="card-title">{{ heroe.nombre }}</h4>
+        <p class="card-text"> {{ heroe.bio }} </p>
+        <p class="card-text"><small class="text-muted">{{ heroe.aparicion |date:'fullDate'}}</small></p>
+        <button (click)="verHeroe()" type="button" class="btn btn-outline-primary btn-block">
+      Ver más...
+    </button>
+        <!-- <a [routerLink]="['/heroe',i]" class="btn btn-outline-primary">Ver más link...</a> -->
+        <div>
+            <p>Cambiar nombre</p>
+            <input class="btn-outline" type="text" #cambiarNombre>
+            <button class="btn btn-outline-primary" (click)="enviarNombreHeroe(cambiarNombre.value, heroe.idx)">Cambiar</button>
         </div>
     </div>
+</div>

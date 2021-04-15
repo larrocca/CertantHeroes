@@ -1,5 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import localeEsAr from '@angular/common/locales/es-AR';
+
 //Servicios
 import {HeroesService} from './servicios/heroes.service'
 //Componentes
@@ -12,6 +14,9 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeEsAr, 'es-Ar');
 
 @NgModule({
   declarations: [
@@ -22,14 +27,17 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
     HeroesComponent,
     HeroeComponent,
     BusquedaComponent,
-    HeroeTarjetaComponent
+    HeroeTarjetaComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [
-    HeroesService
+    HeroesService,
+    { provide: LOCALE_ID, useValue: 'es-Ar' }
+    
   ],
   bootstrap: [AppComponent]
 })

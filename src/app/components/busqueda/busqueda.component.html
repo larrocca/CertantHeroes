@@ -2,6 +2,6 @@
 <div *ngIf="heroes.length === 0">
     <p>No se encontro resultados para {{termino}}</p>
 </div>
-<div *ngFor="let heroe of heroes" class="container">
-    <h1>{{this.heroe.nombre}}</h1>
+<div class="card-columns">
+    <app-heroe-tarjeta [heroe]="foo" [index]="foo.idx" *ngFor="let foo of heroes; let i = index"></app-heroe-tarjeta>
 </div>

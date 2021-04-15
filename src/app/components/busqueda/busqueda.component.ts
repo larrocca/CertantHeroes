@@ -16,7 +16,6 @@ export class BusquedaComponent implements OnInit {
   constructor(
     private _activatedRoute :ActivatedRoute,
     private _heroesService:HeroesService,
-    
   ){}
 
   ngOnInit(): void {
